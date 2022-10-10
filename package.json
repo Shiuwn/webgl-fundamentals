@@ -1,0 +1,16 @@
+{
+  "name": "webgl-fundamentals",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^3.1.0",
+    "vite-plugin-glsl": "^0.4.0",
+    "vite-plugin-vite": "^0.1.0"
+  }
+}
