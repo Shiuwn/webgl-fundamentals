@@ -54,7 +54,7 @@ export default function paint(gl) {
     gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(position), gl.STATIC_DRAW)
 
     const offset = 0
-    const count = 3
+    const count = 6
     const mode = gl.TRIANGLES
     gl.drawArrays(mode, offset, count)
   }, 1000)
