@@ -1,5 +1,5 @@
 import './style.css'
-import paint from './painter/ch04'
+import paint from './painter/ch05'
 
 /**@type {HTMLCanvasElement} */
 const canvas = document.getElementById('canvas')
