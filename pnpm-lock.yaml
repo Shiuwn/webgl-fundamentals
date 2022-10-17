@@ -1,9 +1,13 @@
 lockfileVersion: 5.4
 
 specifiers:
+  gl-matrix: ^3.4.3
   vite: ^3.1.0
   vite-plugin-glsl: ^0.4.0
   vite-plugin-vite: ^0.1.0
+
+dependencies:
+  gl-matrix: 3.4.3
 
 devDependencies:
   vite: 3.1.6
@@ -701,6 +705,10 @@ packages:
     resolution: {integrity: sha512-DyFP3BM/3YHTQOCUL/w0OZHR0lpKeGrxotcHWcqNEdnltqFwXVfhEBQ94eIo34AfQpo0rGki4cyIiftY06h2Fg==}
     engines: {node: 6.* || 8.* || >= 10.*}
     dev: true
+
+  /gl-matrix/3.4.3:
+    resolution: {integrity: sha512-wcCp8vu8FT22BnvKVPjXa/ICBWRq/zjFfdofZy1WSpQZpphblv12/bOQLBC1rMM7SGOFS9ltVmKOHil5+Ml7gA==}
+    dev: false
 
   /glob-parent/5.1.2:
     resolution: {integrity: sha512-AOIgSQCepiJYwP3ARnGx+5VnTu2HBYdzbGP45eLw1vr3zB3vZLeyed1sC9hnbcOc9/SrMyM5RPQrkGz4aS9Zow==}
