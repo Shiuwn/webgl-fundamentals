@@ -163,7 +163,8 @@ export default function paint(gl) {
   mat4.rotate(modelMat, modelMat, deg2Rad(180), new Float32Array([1, 0, 0]))
   mat4.translate(modelMat, modelMat, [-50, -75, -15])
   const modelMatLoc = gl.getUniformLocation(program, 'u_world')
-  gl.uniformMatrix4fv(modelMatLoc, false, modelMat)
+  const transposeMat = mat4.create()
+  gl.uniformMatrix4fv(modelMatLoc, false, mat4.transpose(transposeMat, mat4.invert(transposeMat, modelMat)))
 
   const projectionMat = mat4.create()
   const { width, height } = gl.canvas
@@ -205,7 +206,8 @@ export default function paint(gl) {
     const mpvMat = mat4.create()
     mat4.mul(mpvMat, viewMat, modelMat)
     mat4.mul(mpvMat, projectionMat, mpvMat)
-    gl.uniformMatrix4fv(modelMatLoc, false, modelMat)
+    const transposeMat = mat4.create()
+    gl.uniformMatrix4fv(modelMatLoc, false, mat4.transpose(transposeMat, mat4.invert(transposeMat, modelMat)))
 
     gl.uniformMatrix4fv(mpvMatLoc, false, mpvMat)
     gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT)
